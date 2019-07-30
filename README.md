@@ -16,7 +16,8 @@ let settings = {
     client_id: 'Bot ID here'
   },
   servercount: 0,
-  shardscount: 0
+  shardscount: 0,
+  shardsid: 0,
 }
 
 botlist.post(settings)
