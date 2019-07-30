@@ -6,10 +6,15 @@ An all-in-one poster for bot stats.
 const botlist = require('Discord-Listing');
 
 let settings = {
-  discordbotsorg: true,
-  discordbotsorg_token: 'Set Token Here',
-  discordbotsgg: true,
-  discordbotsgg_token: 'Set Token Here',
+  discordbotsorg: {
+    enabled: true,
+    token: 'Discord Bots Org Token Here'
+  },
+  discordbotsorg: {
+    enabled: true,
+    token: 'Discord Bots GG Token Here',
+    client_id: 'Bot ID here'
+  },
   servercount: 0,
   shardscount: 0
 }
