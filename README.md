@@ -2,7 +2,7 @@
 An all-in-one poster for bot stats. 
 
 ### Example
-```
+``` js
 const botlist = require('Discord-Listing');
 
 let settings = {
