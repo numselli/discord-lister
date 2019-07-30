@@ -7,13 +7,11 @@ const botlist = require('Discord-Listing');
 
 let settings = {
   discordbotsorg: true,
-  discordbotsgg: true
-}
-
-let count = {
+  discordbotsorg_token: 'Set Token Here',
+  discordbotsgg: true,
+  discordbotsgg_token: 'Set Token Here',
   servercount: 0,
   shardscount: 0
-}
 
-botlist.post(settings, count)
+botlist.post(settings)
 ```
