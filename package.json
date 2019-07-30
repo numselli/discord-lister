@@ -1,0 +1,8 @@
+{
+  "name": "Discord Lister",
+  "description": "An all-in-one poster for bot stats.",
+  "dependencies": {
+    "": "^",
+    "": "^"
+  }
+}
