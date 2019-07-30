@@ -12,7 +12,6 @@ let settings = {
 
 let count = {
   servercount: 0,
-  shardsid: 0,
   shardscount: 0
 }
 
