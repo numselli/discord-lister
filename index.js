@@ -2,8 +2,8 @@ const https = require('https')
 
 module.exports = {
      post: async (settings) => {
-        if(settings.discordbotsorg === true) {
-           if(!settings.discordbotsorg_token){
+        if(settings.discordbotsorg.enabled === true) {
+           if(!settings.discordbotsorg.discordbotsorg_token){
              return console.log("discordbotsorg_token is not set!")
            }
            let data = JSON.stringify({
@@ -13,12 +13,12 @@ module.exports = {
            let options = {
               hostname: 'discordbots.org/api',
               port: 443,
-              path: `/bots/{bot.id}/stats`,
+              path: `/bots/stats`,
               method: 'POST',
               headers: {
                  'Content-Type': 'application/json',
                  'Content-Length': data.length,
-                 'Authorization': settings.discordbotsorg_token
+                 'Authorization': settings.discordbotsorg.discordbotsorg_token
               }
            }
            const req = https.request(options, (res) => {
@@ -34,7 +34,7 @@ module.exports = {
            req.end()
         },
              
-        if(settings.discordbotsgg === true) {
+        if(settings.discordbotsgg.enabled === true) {
            
         }
      },
