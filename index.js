@@ -28,7 +28,7 @@ module.exports = {
                  })
            })
            req.on('error', (error) => {
-              console.error(error)
+              console.log(error)
            })
            req.write(data)
            req.end()
