@@ -12,6 +12,7 @@ let settings = {
   discordbotsgg_token: 'Set Token Here',
   servercount: 0,
   shardscount: 0
+}
 
 botlist.post(settings)
 ```
