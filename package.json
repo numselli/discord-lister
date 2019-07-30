@@ -1,6 +1,7 @@
 {
   "name": "Discord Lister",
   "description": "An all-in-one poster for bot stats.",
+  "main": "index.js",
   "dependencies": {
     "": "^",
     "": "^"
