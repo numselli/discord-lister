@@ -9,6 +9,7 @@ module.exports = {
            let data = JSON.stringify({
              'server_count' : settings.servercount,
              'shard_count' : settings.shardscount,
+             'shard_id': settings.shardsid
            });
            let options = {
               hostname: 'discordbots.org/api',
