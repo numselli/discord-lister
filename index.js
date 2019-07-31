@@ -37,7 +37,7 @@ module.exports = {
            })
            req.write(data)
            req.end()
-        },
+        }
              
         if(!settings.discordbotsgg || settings.discordbotsgg.enabled === true) {
            if(!settings.discordbotsgg.token){
