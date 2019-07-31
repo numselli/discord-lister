@@ -1,5 +1,5 @@
 {
-  "name": "Discord-Lister",
+  "name": "discord-lister",
   "description": "An all-in-one poster for bot stats.",
   "version": "1.0.0",
   "main": "index.js",
