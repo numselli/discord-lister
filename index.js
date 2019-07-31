@@ -7,8 +7,8 @@ module.exports = {
         }
           
         if(!settings.discordbotsorg || settings.discordbotsorg.enabled === true) {
-           if(!settings.discordbotsorg.discordbotsorg_token){
-             return console.log("discordbotsorg_token is not set!")
+           if(!settings.discordbotsorg.token){
+             return console.log("token is not set!")
            }
            let data = JSON.stringify({
              'server_count' : settings.servercount,
@@ -23,7 +23,7 @@ module.exports = {
               headers: {
                  'Content-Type': 'application/json',
                  'Content-Length': data.length,
-                 'Authorization': settings.discordbotsorg.discordbotsorg_token
+                 'Authorization': settings.discordbotsorg.token
               }
            }
            const req = https.request(options, (res) => {
@@ -40,8 +40,40 @@ module.exports = {
         },
              
         if(!settings.discordbotsgg || settings.discordbotsgg.enabled === true) {
-           
+           if(!settings.discordbotsgg.token){
+             return console.log("token is not set!")
+           }
+           if(!settings.discordbotsorg.client_id){
+             return console.log("client_id is not set!")
+           }
+           let data = JSON.stringify({
+             'guildCount' : settings.servercount,
+             'shardCount' : settings.shardscount,
+             'shardId': settings.shardsid
+           });
+           let options = {
+              hostname: 'discord.bots.gg/api/v1',
+              port: 443,
+              path: `bots/${settings.client_id}/stats`,
+              method: 'POST',
+              headers: {
+                 'Content-Type': 'application/json',
+                 'Content-Length': data.length,
+                 'Authorization': settings.discordbotsgg.token
+              }
+           }
+           const req = https.request(options, (res) => {
+              console.log(`statusCode: ${res.statusCode}`)
+                 res.on('data', (d) => {
+                    process.stdout.write(d)
+                 })
+           })
+           req.on('error', (error) => {
+              console.log(error)
+           })
+           req.write(data)
+           req.end()
+
         }
-     },
 
 };
