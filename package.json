@@ -1,7 +1,7 @@
 {
   "name": "discord-lister",
   "description": "An all-in-one poster for bot stats.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "repository": {
     "type" : "git",
