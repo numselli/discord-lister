@@ -10,7 +10,7 @@ let settings = {
     enabled: true,
     token: 'Discord Bots Org Token Here'
   },
-  discordbotsorg: {
+  discordbotsgg: {
     enabled: true,
     token: 'Discord Bots GG Token Here',
     client_id: 'Bot ID here'
