@@ -2,7 +2,9 @@ const https = require('https')
 
 module.exports = {
      post: async (settings) => {
-        if(settings.discordbotsorg.enabled === true) {
+        if(!settings.servercount || !settings.shardscount || !settings.shardsid){
+             return("Please check your settings, something is wrong with it")
+        if(!settings.discordbotsorg || settings.discordbotsorg.enabled === true) {
            if(!settings.discordbotsorg.discordbotsorg_token){
              return console.log("discordbotsorg_token is not set!")
            }
@@ -35,7 +37,7 @@ module.exports = {
            req.end()
         },
              
-        if(settings.discordbotsgg.enabled === true) {
+        if(!settings.discordbotsgg || settings.discordbotsgg.enabled === true) {
            
         }
      },
