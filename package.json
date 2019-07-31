@@ -8,5 +8,21 @@
     "url" : "https://github.com/ElectricReality/Discord-Listing.git"
   },
   "license" : "MIT",
-  "homepage": "https://github.com/ElectricReality/Discord-Listing"
+  "homepage": "https://github.com/ElectricReality/Discord-Listing",
+  "keywords": [
+    "discord",
+    "js",
+    "API",
+    "botlist",
+    "bot",
+    "list",
+    "stats",
+    "posting",
+    "Node.js",
+    "discordbot",
+    "discordbots",
+    "dbl",
+    "discordbotlist",
+    "discorbotlists"
+  ],
 }
