@@ -15,9 +15,9 @@ let settings = {
     token: 'Discord Bots GG Token Here',
     client_id: 'Bot ID here'
   },
-  servercount: 0,
-  shardscount: 0,
-  shardsid: 0,
+  servercount: 0, // Required, set to 0 if not needed
+  shardscount: 0, // Required, set to 0 if not needed
+  shardsid: 0, // Required, set to 0 if not needed
 }
 
 botlist.post(settings)
