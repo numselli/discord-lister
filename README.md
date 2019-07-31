@@ -19,7 +19,7 @@ let settings = {
   },
   servercount: 0, // Required, set to 0 if not needed
   shardscount: 0, // Required, set to 0 if not needed
-  shardsid: 0, // Required, set to 0 if not needed
+  shardsid: 0 // Required, set to 0 if not needed
 }
 
 botlist.post(settings)
