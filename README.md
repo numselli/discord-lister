@@ -1,11 +1,11 @@
-# Discord-Listing
+# discord-lister
 An all-in-one poster for bot stats. Supports the following bot listing services:
 - discordbots.org
 - discord.bots.gg
 
 ### Example
 ``` js
-const botlist = require('Discord-Listing');
+const botlist = require('discord-lister');
 
 let settings = {
   discordbotsorg: {
