@@ -2,23 +2,19 @@ const https = require('https')
 
 module.exports = {
      post: async (settings) => {
-        if(!settings.servercount || !settings.shardscount || !settings.shardsid){
-             return("Please check your settings. Something required is not filled.")
-        }
-          
-        if(!settings.discordbotsorg || settings.discordbotsorg.enabled === true) {
+          if(settings.discordbotsorg.enabled === true) {
            if(!settings.discordbotsorg.token){
-             return console.log("token is not set!")
+             return console.log("[discordbots.org] Token is not set!")
            }
            let data = JSON.stringify({
-             'server_count' : settings.servercount,
-             'shard_count' : settings.shardscount,
-             'shard_id': settings.shardsid
+             'server_count' : settings.servercount || 0,
+             'shard_count' : settings.shardscount || 0,
+             'shard_id': settings.shardsid || 0
            });
            let options = {
-              hostname: 'discordbots.org/api',
+              hostname: 'discordbots.org',
               port: 443,
-              path: `/bots/stats`,
+              path: `/api/bots/stats`,
               method: 'POST',
               headers: {
                  'Content-Type': 'application/json',
@@ -26,35 +22,37 @@ module.exports = {
                  'Authorization': settings.discordbotsorg.token
               }
            }
+           
+           
            const req = https.request(options, (res) => {
-              console.log(`statusCode: ${res.statusCode}`)
-                 res.on('data', (d) => {
-                    process.stdout.write(d)
-                 })
+                if(res.statusCode === 200){
+                     console.log('discordbots.org post success!')
+                } else {
+                  console.log(`[discordbots.org] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+                  console.log('[discordbots.org]This may be a cause of a malformed API Token.')
+                }
+                 
            })
+           
            req.on('error', (error) => {
               console.log(error)
            })
            req.write(data)
            req.end()
         }
-             
-        if(!settings.discordbotsgg || settings.discordbotsgg.enabled === true) {
+        if(settings.discordbotsgg.enabled === true) {
            if(!settings.discordbotsgg.token){
-             return console.log("token is not set!")
-           }
-           if(!settings.discordbotsorg.client_id){
-             return console.log("client_id is not set!")
+             return console.log("[discord.bots.gg] Token is not set!")
            }
            let data = JSON.stringify({
-             'guildCount' : settings.servercount,
-             'shardCount' : settings.shardscount,
-             'shardId': settings.shardsid
+             'server_count' : settings.servercount || 0,
+             'shard_count' : settings.shardscount || 0,
+             'shard_id': settings.shardsid || 0
            });
            let options = {
-              hostname: 'discord.bots.gg/api/v1',
+              hostname: 'discord.bots.gg',
               port: 443,
-              path: `bots/${settings.client_id}/stats`,
+              path: `/api/v1/bots/${settings.discordbotsgg.client_id}/stats`,
               method: 'POST',
               headers: {
                  'Content-Type': 'application/json',
@@ -62,18 +60,23 @@ module.exports = {
                  'Authorization': settings.discordbotsgg.token
               }
            }
+           
+           
            const req = https.request(options, (res) => {
-              console.log(`statusCode: ${res.statusCode}`)
-                 res.on('data', (d) => {
-                    process.stdout.write(d)
-                 })
+                if(res.statusCode === 200){
+                     console.log('discord.bots.gg post success!')
+                } else {
+                  console.log(`[discord.bots.gg] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+                  console.log('[discord.bots.gg] This may be a cause of a malformed API Token or Invalid Client ID.')
+                }
+                 
            })
+           
            req.on('error', (error) => {
               console.log(error)
            })
            req.write(data)
            req.end()
-
         }
-
-}
+     }
+};
