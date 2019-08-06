@@ -45,9 +45,9 @@ module.exports = {
              return console.log("[discord.bots.gg] Token is not set!")
            }
            let data = JSON.stringify({
-             'server_count' : settings.servercount || 0,
-             'shard_count' : settings.shardscount || 0,
-             'shard_id': settings.shardsid || 0
+             'guildCount' : settings.servercount || 0,
+             'shardCount' : settings.shardscount || 0,
+             'shardId': settings.shardsid || 0
            });
            let options = {
               hostname: 'discord.bots.gg',
