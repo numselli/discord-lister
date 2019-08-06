@@ -9,11 +9,11 @@ const botlist = require('discord-lister');
 
 let settings = {
   discordbotsorg: {
-    enabled: true,
+    enabled: true, // Required
     token: 'Discord Bots Org Token Here'
   },
   discordbotsgg: {
-    enabled: true,
+    enabled: true, // Required
     token: 'Discord Bots GG Token Here',
     client_id: 'Bot ID here'
   },
