@@ -2,6 +2,7 @@
 An all-in-one poster for bot stats. Supports the following bot listing services:
 - discordbots.org
 - discord.bots.gg
+- discord.boats
 
 ### Example
 ``` js
