@@ -14,7 +14,7 @@ let settings = {
     discordbotsgg: "", // TOKEN HERE
     discordboats: "" // TOKEN HERE
   },
-  clientid: "CLIENT ID HERE",
+  clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0,
   shardscount: 0,
   shardsid: 0
