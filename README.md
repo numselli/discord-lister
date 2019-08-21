@@ -8,18 +8,15 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 const botlist = require('discord-lister');
 
 let settings = {
-  discordbotsorg: {
-    enabled: true, // Required
-    token: 'Discord Bots Org Token Here'
+  listings: {
+    discordbotsorg: "", // TOKEN HERE
+    discordbotsgg: "", // TOKEN HERE
+    discordboats: "" // TOKEN HERE
   },
-  discordbotsgg: {
-    enabled: true, // Required
-    token: 'Discord Bots GG Token Here',
-    client_id: 'Bot ID here'
-  },
-  servercount: 0, // Required, set to 0 if not needed
-  shardscount: 0, // Required, set to 0 if not needed
-  shardsid: 0 // Required, set to 0 if not needed
+  clientid: "CLIENT ID HERE"
+  servercount: 0,
+  shardscount: 0,
+  shardsid: 0
 }
 
 botlist.post(settings)
