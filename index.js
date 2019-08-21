@@ -19,7 +19,7 @@ module.exports = {
           headers: {
             'Content-Type': 'application/json',
             'Content-Length': data.length,
-            'Authorization': settings.discordbotsorg
+            'Authorization': settings.listings.discordbotsorg
           }
         }
         const req = https.request(options, (res) => {
@@ -54,7 +54,7 @@ module.exports = {
           headers: {
             'Content-Type': 'application/json',
             'Content-Length': data.length,
-            'Authorization': settings.discordbotsgg
+            'Authorization': settings.listings.discordbotsgg
           }
         }
         const req = https.request(options, (res) => {
@@ -81,12 +81,12 @@ module.exports = {
         let options = {
           hostname: 'discord.boats',
           port: 443,
-          path: `discord.boats/api/v2/bot/${settings.clientid}`,
+          path: `/api/v2/bot/${settings.clientid}`,
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Content-Length': data.length,
-            'Authorization': settings.discordboats
+            'Authorization': settings.listings.discordboats
           }
         }
         const req = https.request(options, (res) => {
