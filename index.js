@@ -103,6 +103,39 @@ module.exports = {
         req.end()
       }
     }
+    if (settings.listings.discordboats) {
+      if (!settings.listings.botsondiscord) {
+        console.log("[bots.ondiscord.xyz] Token not set!")
+      } else {
+        let data = JSON.stringify({
+          'guildCount': settings.servercount || 0
+        });
+        let options = {
+          hostname: 'bots.ondiscord.xyz',
+          port: 443,
+          path: `/bot-api/bots/${settings.clientid}/guilds`,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length,
+            'Authorization': settings.listings.botsondiscord
+          }
+        }
+        const req = https.request(options, (res) => {
+          if (res.statusCode === 200) {
+            console.log('[bots.ondiscord.xyz] Post success!')
+          } else {
+            console.log(`[bots.ondiscord.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+          }
+        })
+        req.on('error', (error) => {
+          console.log(error)
+        })
+        req.write(data)
+        req.end()
+      }
+    }
 
   }
 };
+        
