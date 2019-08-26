@@ -3,6 +3,7 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - discordbots.org
 - discord.bots.gg
 - discord.boats
+- bots.ondiscord.xyz
 
 ### Example
 ``` js
@@ -12,7 +13,8 @@ let settings = {
   listings: {
     discordbotsorg: "", // TOKEN HERE
     discordbotsgg: "", // TOKEN HERE
-    discordboats: "" // TOKEN HERE
+    discordboats: "", // TOKEN HERE
+    botsondiscord: "" // TOKEN HERE
   },
   clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0,
