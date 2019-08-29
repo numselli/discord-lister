@@ -103,7 +103,7 @@ module.exports = {
         req.end()
       }
     }
-    if (settings.listings.discordboats) {
+    if (settings.listings.botsondiscord) {
       if (!settings.listings.botsondiscord) {
         console.log("[bots.ondiscord.xyz] Token not set!")
       } else {
