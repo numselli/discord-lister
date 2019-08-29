@@ -25,5 +25,8 @@ let settings = {
 botlist.post(settings)
 ```
 
+## Update 1.1.2
+Fixed Error on botsondiscord settings
+
 ## Update 1.1.1
 Added bots.ondiscord.xyz
