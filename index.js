@@ -2,6 +2,7 @@ const https = require('https')
 
 module.exports = {
   post: async(settings) => {
+    console.log("Posting Data to Bot Listing Services")
     if(settings.discordbotsorg){
       require("./post/discordbotsorg")(settings);
     }
