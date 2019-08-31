@@ -22,7 +22,7 @@ module.exports = settings => {
     if (res.statusCode === 200) {
       console.log('[bots.ondiscord.xyz] Post success!')
     } else {
-      console.log(JSON.parse(res))
+      console.log(JSON.stringify(res))
       console.log(`[bots.ondiscord.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
