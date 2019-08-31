@@ -39,4 +39,5 @@ module.exports = settings => {
   req.write(data)
   
   req.end()
+  
 };
