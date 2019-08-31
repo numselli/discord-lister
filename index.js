@@ -5,6 +5,7 @@ module.exports = {
     try {
     console.log("Posting Data to Bot Listing Services")
     if(settings.discordbotsorg){
+      console.log("discordbotsorg")
       require("./post/discordbotsorg")(settings);
     }
     if(settings.discordbotsgg){
