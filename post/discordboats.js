@@ -1,11 +1,9 @@
 const https = require('https')
 
 module.exports = settings => {
-
   if (!settings.listings.discordboats) {
     return console.log("[discord.boats] Token not set!")
-  }
-  
+  } 
   let data = JSON.stringify({
     'server_count': settings.servercount || 0,
   });
@@ -20,7 +18,6 @@ module.exports = settings => {
       'Authorization': settings.listings.discordboats
     }
   }
-  
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
       console.log('[discord.boats] Post success!')
@@ -28,13 +25,9 @@ module.exports = settings => {
       console.log(`[discord.boats] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
-  
   req.on('error', (error) => {
     console.log(error)
   })
-  
   req.write(data)
-  
-  req.end()
-        
+  req.end()    
 };
