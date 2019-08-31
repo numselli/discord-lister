@@ -4,6 +4,9 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - discord.bots.gg
 - discord.boats
 - bots.ondiscord.xyz
+- botsfordiscord.com
+- botlist.space
+- divinediscordbots.com
 
 ### Example
 ``` js
@@ -15,6 +18,9 @@ let settings = {
     discordbotsgg: "", // TOKEN HERE
     discordboats: "", // TOKEN HERE
     botsondiscord: "" // TOKEN HERE
+    botsfordiscord: "", // TOKEN HERE
+    botlistspace: "", // TOKEN HERE
+    divinediscordbots: "" // TOKEN HERE
   },
   clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0,
@@ -24,6 +30,11 @@ let settings = {
 
 botlist.post(settings)
 ```
+## Update 1.2.0
+Added New Bot Lists
+- botsfordiscord.com
+- botlist.space
+- divinediscordbots.com
 
 ## Update 1.1.2
 Fixed Error on botsondiscord settings
