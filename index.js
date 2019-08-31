@@ -103,6 +103,7 @@ module.exports = {
         req.end()
       }
     }
+    
     if (settings.listings.botsondiscord) {
       if (!settings.listings.botsondiscord) {
         console.log("[bots.ondiscord.xyz] Token not set!")
@@ -126,6 +127,106 @@ module.exports = {
             console.log('[bots.ondiscord.xyz] Post success!')
           } else {
             console.log(`[bots.ondiscord.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+          }
+        })
+        req.on('error', (error) => {
+          console.log(error)
+        })
+        req.write(data)
+        req.end()
+      }
+    }
+    
+    if (settings.listings.botsfordiscord) {
+      if (!settings.listings.botsfordiscord) {
+        console.log("[botsfordiscord.com] Token not set!")
+      } else {
+        let data = JSON.stringify({
+          'server_count': settings.servercount || 0
+        });
+        let options = {
+          hostname: 'botsfordiscord.com',
+          port: 443,
+          path: `/api/bot/${settings.clientid}`,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length,
+            'Authorization': settings.listings.botsfordiscord
+          }
+        }
+        const req = https.request(options, (res) => {
+          if (res.statusCode === 200) {
+            console.log('[botsfordiscord.com] Post success!')
+          } else {
+            console.log(`[botsfordiscord.com] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+          }
+        })
+        req.on('error', (error) => {
+          console.log(error)
+        })
+        req.write(data)
+        req.end()
+      }
+    }
+    
+    if (settings.listings.botlistspace) {
+      if (!settings.listings.botlistspace) {
+        console.log("[botlist.space] Token not set!")
+      } else {
+        let data = JSON.stringify({
+          'server_count': settings.servercount || 0,
+          'shards': settings.shardscount || 0
+        });
+        let options = {
+          hostname: 'api.botlist.space',
+          port: 443,
+          path: `/v1/bots/${settings.clientid}`,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length,
+            'Authorization': settings.listings.botlistspace
+          }
+        }
+        const req = https.request(options, (res) => {
+          if (res.statusCode === 200) {
+            console.log('[botlist.space] Post success!')
+          } else {
+            console.log(`[botlist.space] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+          }
+        })
+        req.on('error', (error) => {
+          console.log(error)
+        })
+        req.write(data)
+        req.end()
+      }
+    }
+    
+    if (settings.listings.divinediscordbots) {
+      if (!settings.listings.divinediscordbots) {
+        console.log("[botlist.space] Token not set!")
+      } else {
+        let data = JSON.stringify({
+          'server_count': settings.servercount || 0
+        });
+        let options = {
+          hostname: 'divinediscordbots.com',
+          port: 443,
+          path: `/bot/${settings.clientid}/stats`,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length,
+            'Authorization': settings.listings.divinediscordbots
+          }
+        }
+        const req = https.request(options, (res) => {
+          if (res.statusCode === 200) {
+            console.log('[botlist.space] Post success!')
+          } else {
+            console.log(`[botlist.space] An error occured: ${res.statusCode}, ${res.statusMessage}`)
           }
         })
         req.on('error', (error) => {
