@@ -40,4 +40,4 @@ module.exports = settings => {
   
   req.end()
 
-}
+};
