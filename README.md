@@ -1,6 +1,6 @@
 # discord-lister
 An all-in-one poster for bot stats. Supports the following bot listing services:
-- discordbots.org
+- top.gg
 - discord.bots.gg
 - discord.boats
 - bots.ondiscord.xyz
