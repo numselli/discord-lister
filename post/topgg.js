@@ -1,7 +1,7 @@
 const https = require('https')
 
 module.exports = settings => {
-  if (!settings.listings.discordbotsorg) {
+  if (!settings.listings.topgg) {
     return console.log("[discordbots.org] Token not set!")
   }
   let data = JSON.stringify({
