@@ -30,7 +30,7 @@ let settings = {
 
 botlist.post(settings)
 ```
-## Update 1.2.5
+## Update 1.2.6
 Replaced Bot Lists
 - top.gg
 
