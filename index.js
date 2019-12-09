@@ -7,7 +7,7 @@ module.exports = {
     if(settings.listings.discordbotsorg){
       require("./post/discordbotsorg")(settings);
     }
-    if(settings.listings.discordbotsgg){
+    if(settings.listings.topgg){
       require("./post/discordbotsgg")(settings);
     }
     if(settings.listings.discordboats){
@@ -30,4 +30,3 @@ module.exports = {
     }
   }
 };
-        
