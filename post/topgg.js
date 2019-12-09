@@ -17,7 +17,7 @@ module.exports = settings => {
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.discordbotsorg
+      'Authorization': settings.listings.topgg
     }
   }
   const req = https.request(options, (res) => {
