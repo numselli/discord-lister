@@ -1,8 +1,8 @@
 const https = require('https')
 
 module.exports = settings => {
-  if (!settings.listings.discordbotsgg) {
-    return console.log("[top.gg] Token not set!")
+  if (!settings.listings.discordbotsorg) {
+    return console.log("[discordbots.org] Token not set!")
   }
   let data = JSON.stringify({
     'server_count': settings.servercount || 0,
@@ -17,14 +17,14 @@ module.exports = settings => {
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.discordbotsgg
+      'Authorization': settings.listings.discordbotsorg
     }
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
-      console.log('[top.gg] Post success!')
+      console.log('[discordbots.org] Post success!')
     } else {
-      console.log(`[top.gg] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+      console.log(`[discordbots.org] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
   req.on('error', (error) => {

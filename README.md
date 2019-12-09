@@ -14,7 +14,7 @@ const botlist = require('discord-lister');
 
 let settings = {
   listings: {
-    discordbotsorg: "", // TOKEN HERE
+    topgg: "", // TOKEN HERE
     discordbotsgg: "", // TOKEN HERE
     discordboats: "", // TOKEN HERE
     botsondiscord: "" // TOKEN HERE
@@ -30,6 +30,10 @@ let settings = {
 
 botlist.post(settings)
 ```
+## Update 1.2.2
+Replaced Bot Lists
+- top.gg
+
 ## Update 1.2.0
 Added New Bot Lists
 - botsfordiscord.com

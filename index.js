@@ -4,10 +4,10 @@ module.exports = {
   post: async(settings) => {
     try {
     console.log("Posting Data to Bot Listing Services")
-    if(settings.listings.discordbotsorg){
-      require("./post/discordbotsorg")(settings);
-    }
     if(settings.listings.topgg){
+      require("./post/topgg")(settings);
+    }
+    if(settings.listings.discordbotsgg){
       require("./post/discordbotsgg")(settings);
     }
     if(settings.listings.discordboats){
