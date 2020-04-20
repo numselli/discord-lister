@@ -1,32 +1,18 @@
 const https = require('https')
+const { promisify } = require("util");
+const readdir = promisify(require("fs").readdir);
 
 module.exports = {
   post: async(settings) => {
-    try {
-    console.log("Posting Data to Bot Listing Services")
-    if(settings.listings.topgg){
-      require("./post/topgg")(settings);
+    let lists = await readdir(__dirname + "/post");
+    if(!settings.clientid){
+      return console.log('clientid NOT DEFINED!')
     }
-    if(settings.listings.discordbotsgg){
-      require("./post/discordbotsgg")(settings);
+    if(!settings.output){
+      settings.output = false
     }
-    if(settings.listings.discordboats){
-      require("./post/discordboats")(settings);
-    }
-    if(settings.listings.botsondiscord){
-      require("./post/botsondiscord")(settings);
-    }
-    if(settings.listings.botsfordiscord){
-      require("./post/botsfordiscord")(settings);
-    }
-    if(settings.listings.botlistspace){
-      require("./post/botlistspace")(settings);
-    }
-    if(settings.listings.divinediscordbots){
-      require("./post/divinediscordbots")(settings);
-    }
-    } catch(err) {
-      console.log(err)
-    }
+    lists.forEach(list =>{
+      require(`./post/${list}`)(settings)
+    })
   }
 };

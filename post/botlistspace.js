@@ -2,8 +2,8 @@ const https = require('https')
 
 module.exports = settings => {
   if (!settings.listings.botlistspace) {
-    return console.log("[botlist.space] Token not set!")
-  } 
+    return
+  }
   let data = JSON.stringify({
     'server_count': settings.servercount || 0,
     'shards': settings.shardscount || 0
@@ -21,7 +21,9 @@ module.exports = settings => {
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
-      console.log('[botlist.space] Post success!')
+      if(settings.output == true){
+        console.log('[botlist.space] Post success!')
+      }
     } else {
       console.log(`[botlist.space] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }

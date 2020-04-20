@@ -2,7 +2,7 @@ const https = require('https')
 
 module.exports = settings => {
   if (!settings.listings.botsondiscord) {
-    return console.log("[bots.ondiscord.xyz] Token not set!")
+    return
   }
   let data = JSON.stringify({
     'guildCount': settings.servercount || 0
@@ -20,7 +20,9 @@ module.exports = settings => {
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
-      console.log('[bots.ondiscord.xyz] Post success!')
+      if(settings.output == true){
+        console.log('[bots.ondiscord.xyz] Post success!')
+      }
     } else {
       console.log(`[bots.ondiscord.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
