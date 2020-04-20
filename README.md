@@ -6,7 +6,6 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - bots.ondiscord.xyz
 - botsfordiscord.com
 - botlist.space
-- divinediscordbots.com
 
 ### Example
 ``` js
@@ -31,6 +30,10 @@ let settings = {
 
 botlist.post(settings)
 ```
+### Requests to add new bot lists?
+Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.
+
+### Changelog
 ## Update 1.2.7
 Replaced Bot Lists
 - Removed Divine Discord Bots
