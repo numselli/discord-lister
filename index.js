@@ -11,7 +11,7 @@ module.exports = {
     if(!settings.output){
       settings.output = false
     }
-    posts.forEach(list =>{
+    lists.forEach(list =>{
       require(`./post/${list}`)(settings)
     })
   }
