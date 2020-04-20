@@ -4,7 +4,7 @@ const readdir = promisify(require("fs").readdir);
 
 module.exports = {
   post: async(settings) => {
-    let lists = await readdir("./post/");
+    let lists = await readdir("./post");
     if(!settings.clientid){
       return console.log('clientid NOT DEFINED!')
     }
@@ -12,7 +12,7 @@ module.exports = {
       settings.output = false
     }
     posts.forEach(list =>{
-      require(`./posts/${list}`)(settings)
+      require(`./post/${list}`)(settings)
     })
   }
 };
