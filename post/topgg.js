@@ -2,7 +2,7 @@ const https = require('https')
 
 module.exports = settings => {
   if (!settings.listings.topgg) {
-    return console.log("top.gg] Token not set!")
+    return
   }
   let data = JSON.stringify({
     'server_count': settings.servercount || 0,
@@ -22,7 +22,9 @@ module.exports = settings => {
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
-      console.log('[top.gg] Post success!')
+      if(settings.output == true){
+        console.log('[top.gg] Post success!')
+      }
     } else {
       console.log(`[top.gg] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }

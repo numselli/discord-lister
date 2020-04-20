@@ -19,17 +19,23 @@ let settings = {
     discordboats: "", // TOKEN HERE
     botsondiscord: "" // TOKEN HERE
     botsfordiscord: "", // TOKEN HERE
-    botlistspace: "", // TOKEN HERE
-    divinediscordbots: "" // TOKEN HERE
+    botlistspace: "" // TOKEN HERE
   },
   clientid: "CLIENT ID HERE", // REQUIRED
-  servercount: 0,
-  shardscount: 0,
-  shardsid: 0
+  servercount: 0, // Integer
+  shardscount: 0, // Integer
+  shardsid: 0, // Integer
+  output: false // Boolean
+
 }
 
 botlist.post(settings)
 ```
+## Update 1.2.7
+Replaced Bot Lists
+- Removed Divine Discord Bots
+- Added Output setting for you to disable console.log output
+
 ## Update 1.2.6
 Replaced Bot Lists
 - top.gg

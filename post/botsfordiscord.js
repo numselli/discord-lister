@@ -2,7 +2,7 @@ const https = require('https')
 
 module.exports = settings => {
   if (!settings.listings.botsfordiscord) {
-    return console.log("[botsfordiscord.com] Token not set!")
+    return
   }
   let data = JSON.stringify({
     'server_count': settings.servercount || 0
@@ -20,7 +20,9 @@ module.exports = settings => {
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
-      console.log('[botsfordiscord.com] Post success!')
+      if(settings.output == true){
+        console.log('[botsfordiscord.com] Post success!')
+      }
     } else {
       console.log(`[botsfordiscord.com] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
@@ -29,5 +31,5 @@ module.exports = settings => {
     console.log(error)
   })
   req.write(data)
-  req.end() 
+  req.end()
 };
