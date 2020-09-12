@@ -16,7 +16,7 @@ let settings = {
     topgg: "", // TOKEN HERE
     discordbotsgg: "", // TOKEN HERE
     discordboats: "", // TOKEN HERE
-    botsondiscord: "" // TOKEN HERE
+    botsondiscord: "", // TOKEN HERE
     botsfordiscord: "", // TOKEN HERE
     botlistspace: "" // TOKEN HERE
   },
@@ -34,6 +34,10 @@ botlist.post(settings)
 Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.
 
 ### Changelog
+## Update 1.2.8
+Replaced Bot Lists
+- Added TopCord.xyz
+
 ## Update 1.2.7
 Replaced Bot Lists
 - Removed Divine Discord Bots
