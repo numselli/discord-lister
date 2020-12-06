@@ -1,30 +1,30 @@
 const https = require('https')
 
 module.exports = settings => {
-  if (!settings.listings.botlistspace) {
+  if (!settings.listings.discordextremelist) {
     return
   }
   let data = JSON.stringify({
-    'server_count': settings.servercount || 0
+    'guildCount': settings.servercount || 0,
   });
   let options = {
-    hostname: 'api.botlist.space',
+    hostname: 'api.discordextremelist.xyz',
     port: 443,
-    path: `/v1/bots/${settings.clientid}`,
+    path: `/v2/bot/${settings.clientid}`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.botlistspace
+      'authorization': settings.listings.discordextremelist
     }
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
       if(settings.output == true){
-        console.log('[botlist.space] Post success!')
+        console.log('[discordextremelist.xyz] Post success!')
       }
     } else {
-      console.log(`[botlist.space] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+      console.log(`[discordextremelist.xyz] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
   req.on('error', (error) => {

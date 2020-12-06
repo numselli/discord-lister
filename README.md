@@ -18,12 +18,17 @@ let settings = {
     discordboats: "", // TOKEN HERE
     botsondiscord: "", // TOKEN HERE
     botsfordiscord: "", // TOKEN HERE
-    botlistspace: "" // TOKEN HERE
+    botlistspace: "", // TOKEN HERE
+    topcord: "", // TOKEN HERE
+    discordextremelist: "", // TOKEN HERE
+    discordbotlist: "",
+    sentcord: ""
   },
   clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0, // Integer
   shardscount: 0, // Integer
   shardsid: 0, // Integer
+  usercount: 0 , // Integer
   output: false // Boolean
 
 }
@@ -34,6 +39,12 @@ botlist.post(settings)
 Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.
 
 ### Changelog
+## Update 1.2.9
+Added New Bot Lists
+- Added discordextremelist.xyz
+- discordbotlist.com
+- sentcord.com
+
 ## Update 1.2.8
 Replaced Bot Lists
 - Added TopCord.xyz
