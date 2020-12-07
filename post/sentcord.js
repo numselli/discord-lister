@@ -6,8 +6,7 @@ module.exports = settings => {
   }
   let data = JSON.stringify({
     'ServerCount': settings.servercount || 0,
-    'shardCount': settings.shardscount || 0,
-    'users': settings.usercount || 0
+    'shardCount': settings.shardscount || 0
   });
   let options = {
     hostname: 'sentcord.com',
