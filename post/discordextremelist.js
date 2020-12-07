@@ -6,6 +6,7 @@ module.exports = settings => {
   }
   let data = JSON.stringify({
     'guildCount': settings.servercount || 0,
+    'shardCount': settings.shardscount || 0,
   });
   let options = {
     hostname: 'api.discordextremelist.xyz',
