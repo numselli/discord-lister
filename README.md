@@ -21,8 +21,8 @@ let settings = {
     botlistspace: "", // TOKEN HERE
     topcord: "", // TOKEN HERE
     discordextremelist: "", // TOKEN HERE
-    discordbotlist: "",
-    sentcord: ""
+    discordbotlist: "", // TOKEN HERE
+    sentcord: "" // TOKEN HERE
   },
   clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0, // Integer
