@@ -43,7 +43,7 @@ botlist.post(settings)
 Send a Pull Request of your fork with the latest version of the repo and add the bot list at *post*.
 
 ### Changelog
-## Update 1.2.9
+## Update 1.3.0
 Added New Bot Lists
 - Added discordextremelist.xyz
 - discordbotlist.com
