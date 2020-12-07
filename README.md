@@ -6,6 +6,10 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - bots.ondiscord.xyz
 - botsfordiscord.com
 - botlist.space
+- topcord.xyz
+- discordextremelist.xyz
+- discordbotlist.com
+- sentcord.com
 
 ### Example
 ``` js
