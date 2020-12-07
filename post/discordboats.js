@@ -10,7 +10,7 @@ module.exports = settings => {
   let options = {
     hostname: 'discord.boats',
     port: 443,
-    path: `/api/v2/bot/${settings.clientid}`,
+    path: `/api/bot/${settings.clientid}`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

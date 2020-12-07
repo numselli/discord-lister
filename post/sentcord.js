@@ -1,30 +1,31 @@
 const https = require('https')
 
 module.exports = settings => {
-  if (!settings.listings.botlistspace) {
+  if (!settings.listings.sentcord) {
     return
   }
   let data = JSON.stringify({
-    'server_count': settings.servercount || 0
+    'ServerCount': settings.servercount || 0,
+    'shardCount': settings.shardscount || 0
   });
   let options = {
-    hostname: 'api.botlist.space',
+    hostname: 'sentcord.com',
     port: 443,
-    path: `/v1/bots/${settings.clientid}`,
+    path: `/api/bot/${settings.clientid}`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.botlistspace
+      'authorization': settings.listings.sentcord
     }
   }
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
       if(settings.output == true){
-        console.log('[botlist.space] Post success!')
+        console.log('[sentcord.com] Post success!')
       }
     } else {
-      console.log(`[botlist.space] An error occured: ${res.statusCode}, ${res.statusMessage}`)
+      console.log(`[sentcord.com] An error occured: ${res.statusCode}, ${res.statusMessage}`)
     }
   })
   req.on('error', (error) => {
