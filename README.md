@@ -10,6 +10,7 @@ An all-in-one poster for bot stats. Supports the following bot listing services:
 - discordextremelist.xyz
 - discordbotlist.com
 - sentcord.com
+- dbots.co
 
 ### Example
 ``` js
@@ -26,7 +27,8 @@ let settings = {
     topcord: "", // TOKEN HERE
     discordextremelist: "", // TOKEN HERE
     discordbotlist: "", // TOKEN HERE
-    sentcord: "" // TOKEN HERE
+    sentcord: "", // TOKEN HERE
+    dbotsco: "" // TOKEN HERE
   },
   clientid: "CLIENT ID HERE", // REQUIRED
   servercount: 0, // Integer
