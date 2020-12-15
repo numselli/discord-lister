@@ -19,8 +19,6 @@ module.exports = settings => {
       'Authorization': settings.listings.discordbotlist
     }
   }
-  console.log(options)
-  console.log(data)
   const req = https.request(options, (res) => {
     if (res.statusCode === 200) {
       if(settings.output == true){
