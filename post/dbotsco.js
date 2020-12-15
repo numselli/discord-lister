@@ -15,7 +15,7 @@ module.exports = settings => {
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.dbotsbhuco
+      'Authorization': settings.listings.dbotsco
     }
   }
   const req = https.request(options, (res) => {
