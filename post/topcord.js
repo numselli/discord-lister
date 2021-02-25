@@ -9,9 +9,9 @@ module.exports = settings => {
     'shards': settings.shardscount || 0,
   });
   let options = {
-    hostname: 'topcord.xyz',
+    hostname: 'api.topcord.xyz',
     port: 443,
-    path: `/api/bot/stats/${settings.clientid}`,
+    path: `/bot/${settings.clientid}/stats`,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
