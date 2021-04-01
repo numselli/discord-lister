@@ -8,7 +8,7 @@ module.exports = settings => {
     'server_count': settings.servercount || 0
   });
   let options = {
-    hostname: 'api.botlist.space',
+    hostname: 'api.discordlist.space',
     port: 443,
     path: `/v1/bots/${settings.clientid}`,
     method: 'POST',
