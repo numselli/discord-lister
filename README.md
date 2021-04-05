@@ -36,12 +36,13 @@ let settings = {
 		discordlabs: "",
 		blist: ""
 	},
-	clientid: "CLIENT ID HERE", // REQUIRED
-	servercount: 0, // Integer
-	shardscount: 0, // Integer
-	shardsid: 0, // Integer
-	usercount: 0 , // Integer
-	output: false // Boolean
+	// the following is required
+	clientid: "CLIENT ID HERE",
+	servercount: 0,
+	shardscount: 0,
+	shardsid: 0,
+	usercount: 0 ,
+	output: false
 }
 
 publisher.post(settings)
