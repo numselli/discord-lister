@@ -16,7 +16,7 @@ module.exports = settings => {
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': data.length,
-      'Authorization': settings.listings.botlistspace
+      'Authorization': settings.listings.blist
     }
   }
   const req = https.request(options, (res) => {
